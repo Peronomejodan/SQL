@@ -1,0 +1,18 @@
+Requête Utile :
+
+
+Apprentissage des sorts gratuit.
+    Citation :
+    	UPDATE `npc_trainer` SET `spellcost` = 0;
+
+Plus de durabilitée.
+    Citation :
+    	UPDATE `item_template` SET `MaxDurability` = 0;
+
+Aucun cout pour les items.
+    Citation :
+    	UPDATE `item_template` SET `BuyPrice` = 0;
+
+Aucune valeur de vente.
+    Citation :
+    	UPDATE `item_template` SET `SellPrice` = 1;

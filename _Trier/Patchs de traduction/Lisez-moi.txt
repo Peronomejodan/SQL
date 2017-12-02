@@ -1,0 +1,10 @@
+UPLOAD by Mageex pour WoW-Emu communauté FR
+
+
+Etape 1 : Appliquer le fichier Prepare_locales_tables.sql
+
+Etape 2 : Appliquer le fichier de votre choix dans le dossier "Installation"
+
+
+A savoir : Vous devez ré-appliquer le fichier "prepare_locales_tables.sql" à chaque fois que vous appliquez
+un fichier .sql de traduction qui se trouve dans le dossier "Installation".
