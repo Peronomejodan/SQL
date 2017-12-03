@@ -15,15 +15,3 @@ SET
 
 -- Nous n'avons pas "déclarés" les textes car ils sont tous différent et ce que l'ont veux c'est un code compréhensible.
 
-DELETE FROM `gossip_menu_option` WHERE `MenuID` = @GOSSIP_MENU_ENTRY; -- On demande la suppression des ENTRY qui sont égale à @GOSSIP_MENU_ENTRY
-DELETE FROM `gossip_menu_option` WHERE `MenuID` = @GOSSIP_MENU_ENTRY+1; -- Ici on demande la même chose mais en rajoutant des +1, +2 etc..
-DELETE FROM `gossip_menu_option` WHERE `MenuID` = @GOSSIP_MENU_ENTRY+2;
-DELETE FROM `gossip_menu_option` WHERE `MenuID` = @GOSSIP_MENU_ENTRY+3;
-DELETE FROM `gossip_menu_option` WHERE `MenuID` = @GOSSIP_MENU_ENTRY+4;
-DELETE FROM `gossip_menu_option` WHERE `MenuID` = @GOSSIP_MENU_ENTRY+5;
-DELETE FROM `gossip_menu_option` WHERE `MenuID` = @GOSSIP_MENU_ENTRY+6;
-DELETE FROM `gossip_menu_option` WHERE `MenuID` = @GOSSIP_MENU_ENTRY+7;
-DELETE FROM `gossip_menu_option` WHERE `MenuID` = @GOSSIP_MENU_ENTRY+8;
-DELETE FROM `gossip_menu_option` WHERE `MenuID` = @GOSSIP_MENU_ENTRY+9;
-DELETE FROM `gossip_menu_option` WHERE `MenuID` = @GOSSIP_MENU_ENTRY+10;
-DELETE FROM `gossip_menu_option` WHERE `MenuID` = @GOSSIP_MENU_ENTRY+11;
