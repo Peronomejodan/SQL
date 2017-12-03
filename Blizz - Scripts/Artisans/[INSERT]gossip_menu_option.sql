@@ -42,30 +42,42 @@ SET -- La nous allons répertoriés les recettes non apprises.
 	@RECETTE := '';
 
 SET -- La nous allons répertoriés toutes les recettes.
-	@RECETTE1 := '|TInterface/ICONS/inv_shield_19:35:35:-20|t|CFF0070ddPlaque en titane',
+	#
+	#- AMELIORATION D'OBJET DEBUT
+	#
+	@RECETTE1 := '|TInterface/ICONS/inv_shield_19:35:35:-20|t|CFF0070ddPlaque en titane', -- NIVEAU 70
 		@RECETTE1_0 := '|CFF0070ddPLAQUE EN TITANE|r\r|CFFffd100Niveau d\'objet 80|r\r\r|CFF1eff00Utiliser : Fixe de façon permanente une plaque légère en titane à un bouclier, ce qui en augmente la valeur de blocagede 81 et réduit la durée des effets de désarmement de 50%. Ne se cumule pas avec les effets similaires.\r Si vous fixez cette plaque en titane sur un bouclier, celui-ci vous seras lié.|r\r\r Composants :\r\r|TInterface/ICONS/inv_ingot_platinum:35:35:-20|t|CFF1eff00Barre de titane  |r x4\r|TInterface/ICONS/inv_elemental_eternal_shadow:35:35:-20|t|CFF1eff00Ombre éternelle|r x4',
-	@RECETTE2 := '|TInterface/ICONS/inv_belt_18:35:35:-20|t|CFF1eff00Dragonne en titane',
+	@RECETTE2 := '|TInterface/ICONS/inv_belt_18:35:35:-20|t|CFF1eff00Dragonne en titane',-- NIVEAU 70
 		@RECETTE2_0 := '|CFF0070ddDRAGONNE EN TITANE|r\r|CFFffd100Niveau d\'objet 80|r\r\r|CFF1eff00Utiliser : Attache une chaîne à votre arme, ce qui réduit de 50% la durée des effets de désarmement et augmente de 28 votre score de toucher. Ne se comule pas avec d\'autres effets similaires.\r Si vous fixez cette chaîne sur une arme, celle-ci vous seras liée.|r\r\r Composants :\r\r|TInterface/ICONS/inv_ingot_yoggthorite:35:35:-20|tBarre de saronite  x2\r|TInterface/ICONS/inv_ingot_platinum:35:35:-20|t|CFF1eff00Barre de titane     |r x1',
-	@RECETTE3 := '|TInterface/ICONS/Pointe de bouclier en titane',
+	@RECETTE3 := '|TInterface/ICONS/inv_titanium_shield_spike:35:35:-20|tPointe de bouclier en titane', -- NIVEAU 70
 		@RECETTE3_0 := '',
-	@RECETTE4 := '|TInterface/ICONS/Boucle de ceinture éternelle', -- PLAN
+	@RECETTE4 := '|TInterface/ICONS/inv_belt_36:35:35:-20|tBoucle de ceinture éternelle', -- NIVEAU 70 && PLAN
 		@RECETTE4_0 := '',
-	@RECETTE5 := '|TInterface/ICONS/Pointe de bouclier en gangracier',
+	@RECETTE5 := '|TInterface/ICONS/inv_misc_armorkit_27:35:35:-20|tPointe de bouclier en gangracier', -- NIVEAU 60
 		@RECETTE5_0 := '',
-	@RECETTE6 := '|TInterface/ICONS/Dragonne en adamantite',
+	@RECETTE6 := '|TInterface/ICONS/spell_frost_chainsofice:35:35:-20|tDragonne en adamantite', -- NIVEAU 50
 		@RECETTE6_0 := '',
-	@RECETTE7 := '|TInterface/ICONS/Pointe de bouclier en thorium',
+	@RECETTE7 := '|TInterface/ICONS/inv_misc_armorkit_20:35:35:-20|tPointe de bouclier en thorium', -- NIVEAU 40
 		@RECETTE7_0 := '',
-	@RECETTE8 := '|TInterface/ICONS/Eperons en mithril',
+	@RECETTE8 := '|TInterface/ICONS/ability_rogue_sprint:35:35:-20|tEperons en mithril', -- NIVEAU 30
 		@RECETTE8_0 := '',
-	@RECETTE9 := '|TInterface/ICONS/Pointe de bouclieren mithril',
+	@RECETTE9 := '|TInterface/ICONS/inv_misc_armorkit_02:35:35:-20|tPointe de bouclier en mithril', -- NIVEAU 20
 		@RECETTE9_0 := '',
-	@RECETTE10 := '|TInterface/ICONS/Dragonne en acier',
+	@RECETTE10 := '|TInterface/ICONS/spell_frost_chainsofice:35:35:-20|tDragonne en acier', -- NIVEAU 20
 		@RECETTE10_0 := '',
-	@RECETTE11 := '|TInterface/ICONS/Contrepoids en fer',
+	@RECETTE11 := '|TInterface/ICONS/inv_misc_orb_01:35:35:-20|tContrepoids en fer', -- NIVEAU 15
 		@RECETTE11_0 := '',
-	@RECETTE12 := '|TInterface/ICONS/Pointe de bouclier en fer',
-		@RECETTE13_0 := '';
+	@RECETTE12 := '|TInterface/ICONS/inv_misc_armorkit_01:35:35:-20|tPointe de bouclier en fer', -- NIVEAU 15
+		@RECETTE12_0 := '',
+	#
+	#- AMELIORATION D'OBJET FIN
+	#
+
+	#
+	#- Autres DEBUT
+	#
+	@RECETTE13 := '',
+		@RECETTE13_0 := '',
 
 REPLACE INTO `gossip_menu_option` (`MenuID`, `OptionID`, `OptionIcon`, `OptionText`, `OptionType`, `OptionNpcFlag`, `ActionMenuID`, `BoxText`)
 VALUES
@@ -76,15 +88,15 @@ VALUES
 		(@GOSSIP_MENU_ENTRY+50, @GOSSIP_MENU_OPTION+3, @GOSSIP_MENU_ICON, @RECETTE4, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+50, @RECETTE4_0),
 		(@GOSSIP_MENU_ENTRY+50, @GOSSIP_MENU_OPTION+4, @GOSSIP_MENU_ICON, @RECETTE5, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+50, @RECETTE5_0),
 		(@GOSSIP_MENU_ENTRY+50, @GOSSIP_MENU_OPTION+5, @GOSSIP_MENU_ICON, @RECETTE6, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+50, @RECETTE6_0),
-		(@GOSSIP_MENU_ENTRY+50, @GOSSIP_MENU_OPTION+50, @GOSSIP_MENU_ICON, 'Précédent', @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID, ''),
-		(@GOSSIP_MENU_ENTRY+50, @GOSSIP_MENU_OPTION+51, @GOSSIP_MENU_ICON, 'Suivant', @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+51, ''),
+			(@GOSSIP_MENU_ENTRY+50, @GOSSIP_MENU_OPTION+50, @GOSSIP_MENU_ICON, 'Précédent', @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID, ''),
+			(@GOSSIP_MENU_ENTRY+50, @GOSSIP_MENU_OPTION+51, @GOSSIP_MENU_ICON, 'Suivant', @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+51, ''),
 		(@GOSSIP_MENU_ENTRY+51, @GOSSIP_MENU_OPTION, @GOSSIP_MENU_ICON, @RECETTE7, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+51, @RECETTE7_0),
 		(@GOSSIP_MENU_ENTRY+51, @GOSSIP_MENU_OPTION+1, @GOSSIP_MENU_ICON, @RECETTE8, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+51, @RECETTE8_0),
 		(@GOSSIP_MENU_ENTRY+51, @GOSSIP_MENU_OPTION+2, @GOSSIP_MENU_ICON, @RECETTE9, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+51, @RECETTE9_0),
 		(@GOSSIP_MENU_ENTRY+51, @GOSSIP_MENU_OPTION+3, @GOSSIP_MENU_ICON, @RECETTE10, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+51, @RECETTE10_0),
 		(@GOSSIP_MENU_ENTRY+51, @GOSSIP_MENU_OPTION+4, @GOSSIP_MENU_ICON, @RECETTE11, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+51, @RECETTE11_0),
 		(@GOSSIP_MENU_ENTRY+51, @GOSSIP_MENU_OPTION+5, @GOSSIP_MENU_ICON, @RECETTE12, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+51, @RECETTE12_0),
-		(@GOSSIP_MENU_ENTRY+51, @GOSSIP_MENU_OPTION+6, @GOSSIP_MENU_ICON, @RECETTE13, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+51, @RECETTE13_0),
+			(@GOSSIP_MENU_ENTRY+51, @GOSSIP_MENU_OPTION+50, @GOSSIP_MENU_ICON, 'Précédent', @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+51, ''),
 
 	(@GOSSIP_MENU_ENTRY, @GOSSIP_MENU_OPTION+1, @GOSSIP_MENU_ICON, 'Autres', @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+100, ''),
 
