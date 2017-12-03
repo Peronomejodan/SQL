@@ -29,7 +29,7 @@ SET
 -- FORGERONS DEBUT
 
 -- Voici une ligne d'exemple à copier/coller en cas d'insertion : (@GOSSIP_MENU_ENTRY, @GOSSIP_MENU_OPTION, @GOSSIP_MENU_ICON, '', @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID, ''),
--- Couleur Vert : |CFF1eff07
+-- Couleur Vert : |CFF1eff00
 -- Couleur Bleu : |CFF0070dd
 -- Couleur Violet : |CFFa335ee
 -- Couleur Orange :
@@ -37,10 +37,15 @@ SET
 
 -- Code Image : |TInterface/ICONS/TONIMAGE:35:35:-20|t
 
+
+SET -- La nous allons répertoriés toutes les recettes.
+	@RECETTE1 := '|TInterface/ICONS/inv_shield_19:35:35:-20|t|CFF0070ddPlaque en titane',
+		@RECETTE1_1 := '|CFF0070ddPLAQUE EN TITANE|r\r|CFFffd100Niveau d\'objet 80|r\r\r|CFF1eff00Utiliser : Fixe de façon permanente une plaque légère en titane à un bouclier, ce qui en augmente la valeur de blocagede 81 et réduit la durée des effets de désarmement de 50%. Ne se cumule pas avec les effets similaires.\r Si vous fixez cette plaque de titane sur un bouclier, celui-ci vous seras lié.|r\r\r|TInterface/ICONS/inv_ingot_platinum:35:35:-20|t|CFF1eff00Barre de titane  |r x4\r|TInterface/ICONS/inv_elemental_eternal_shadow:35:35:-20|t|CFF1eff00Ombre éternelle|r x4',
+
 INSERT INTO `gossip_menu_option` (`MenuID`, `OptionID`, `OptionIcon`, `OptionText`, `OptionType`, `OptionNpcFlag`, `ActionMenuID`, `BoxText`)
 VALUES
 	(@GOSSIP_MENU_ENTRY, @GOSSIP_MENU_OPTION, @GOSSIP_MENU_ICON, 'Amélioration d\'objet', @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+1, ''),
-		(@GOSSIP_MENU_ENTRY+1, @GOSSIP_MENU_OPTION, @GOSSIP_MENU_ICON, '|TInterface/ICONS/inv_shield_19:35:35:-20|t|CFF0070ddPlaque en titane', @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID, ''),
+		(@GOSSIP_MENU_ENTRY+1, @GOSSIP_MENU_OPTION, @GOSSIP_MENU_ICON, @RECETTE1, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID, @RECETTE1_1);
 
 	(@GOSSIP_MENU_ENTRY, @GOSSIP_MENU_OPTION+1, @GOSSIP_MENU_ICON, 'Autres', @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID, ''),
 
