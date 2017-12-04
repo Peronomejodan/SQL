@@ -36,74 +36,68 @@ SET
 -- Couleur inutilisés : |CFF6E6E6E
 -- Fin de couleur : |r
 
--- Code Image : |TInterface/ICONS/TONIMAGE:30:30:-20|t
+-- Code Image : |TInterface/ICONS/TONIMAGE:35:35:-20|t
 
-SET -- La nous allons répertoriés les recettes non apprises.
-	@RECETTE_NA := 'Vous n\'avez pas encore découvert les subtils secrets de cette recette.';
+SET -- La nous allons répertoriés les recettes non apprises. Autres paramétres.
+	@RECETTE_NA := 'Malheureusement l\'artisan n\'as pas encore appris a créer ceci!\r',
+	@GOSSIP_MENU_ICON := 1;
 
 SET -- La nous allons répertoriés toutes les recettes.
 	#
 	#- AMELIORATION D'OBJET DEBUT
 	#
 	
-	@RECETTE1 := '|TInterface/ICONS/inv_shield_19:30:30:-20|t|CFF0070ddPlaque en titane', -- NIVEAU 70
+	@RECETTE1 := '|TInterface/ICONS/inv_shield_19:35:35:-20|t|CFF0070ddPlaque en titane', -- NIVEAU 70
 		@RECETTE1_0 := '|CFF0070ddPLAQUE EN TITANE|r\r|CFFffd100Niveau 70 requis|r\r\r|CFF1eff00Utiliser : Fixe de façon permanente une plaque légère en titane à un bouclier, ce qui en augmente la valeur de blocagede 81 et réduit la durée des effets de désarmement de 50%. Ne se cumule pas avec les effets similaires.\r Si vous fixez cette plaque en titane sur un bouclier, celui-ci vous seras lié.|r\r\r Composants :\r\r|TInterface/ICONS/inv_ingot_platinum:30:30:-20|t|CFF1eff00Barre de titane  |r x4\r|TInterface/ICONS/inv_elemental_eternal_shadow:30:30:-20|t|CFF1eff00Ombre éternelle|r x4',
-			@RECETTE1_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:30:30:-20|t|CFF6E6E6EPlaque en titane',
+			@RECETTE1_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPlaque en titane',
 
-	@RECETTE2 := '|TInterface/ICONS/inv_belt_18:30:30:-20|t|CFF1eff00Dragonne en titane',-- NIVEAU 70
+	@RECETTE2 := '|TInterface/ICONS/inv_belt_18:35:35:-20|t|CFF1eff00Dragonne en titane',-- NIVEAU 70
 		@RECETTE2_0 := '|CFF1eff00DRAGONNE EN TITANE|r\r|CFFffd100Niveau 70 requis|r\r\r|CFF1eff00Utiliser : Attache une chaîne à votre arme, ce qui réduit de 50% la durée des effets de désarmement et augmente de 28 votre score de toucher. Ne se comule pas avec d\'autres effets similaires.\r Si vous fixez cette chaîne sur une arme, celle-ci vous seras liée.|r\r\r Composants :\r\r|TInterface/ICONS/inv_ingot_yoggthorite:30:30:-20|tBarre de saronite  x2\r|TInterface/ICONS/inv_ingot_platinum:30:30:-20|t|CFF1eff00Barre de titane     |r x1',
-			@RECETTE2_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:30:30:-20|t|CFF6E6E6EDragonne en titane',
+			@RECETTE2_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EDragonne en titane',
 
-	@RECETTE3 := '|TInterface/ICONS/inv_titanium_shield_spike:30:30:-20|t|CFF1eff00Pointe de bouclier en titane', -- NIVEAU 70
+	@RECETTE3 := '|TInterface/ICONS/inv_titanium_shield_spike:35:35:-20|t|CFF1eff00Pointe de bouclier en titane', -- NIVEAU 70
 		@RECETTE3_0 := '|CFF1eff00POINTE DE BOUCLIER EN TITANE|r\r|CFFffd100Niveau 70 requis|r\r\r|CFF1eff00Utiliser : Attache une Pointe en titane à votre bouclier. Elle inflige 45 à 67 points de dégâts à chaque fois que vous bloquez avec.\r Si vous fixez une pointe de bouclier en titane à un bouclier, celui-ci vous sera lié.|r\r\r Composants :\r\r|TInterface/ICONS/inv_ingot_yoggthorite:30:30:-20|tBarre de saronite  x2\r|TInterface/ICONS/inv_ingot_platinum:30:30:-20|t|CFF1eff00Barre de titane     |r x1',
-			@RECETTE3_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:30:30:-20|t|CFF6E6E6EPointe de bouclier en titane',
+			@RECETTE3_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPointe de bouclier en titane',
 
-	@RECETTE4 := '|TInterface/ICONS/inv_belt_36:30:30:-20|t|CFF0070ddBoucle de ceinture éternelle', -- NIVEAU 70 && PLAN
+	@RECETTE4 := '|TInterface/ICONS/inv_belt_36:35:35:-20|t|CFF0070ddBoucle de ceinture éternelle', -- NIVEAU 70 && PLAN
 		@RECETTE4_0 := '',
-			@RECETTE4_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:30:30:-20|t|CFF6E6E6EBoucle de ceinture éternelle',
+			@RECETTE4_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EBoucle de ceinture éternelle',
 
-	@RECETTE5 := '|TInterface/ICONS/inv_misc_armorkit_27:30:30:-20|t|CFF1eff00Pointe de bouclier en gangracier', -- NIVEAU 60
+	@RECETTE5 := '|TInterface/ICONS/inv_misc_armorkit_27:35:35:-20|t|CFF1eff00Pointe de bouclier en gangracier', -- NIVEAU 60
 		@RECETTE5_0 := '|CFF1eff00POINTE DE BOUCLIER EN GANGRACIER|r\r|CFFffd100Niveau 60 requis|r\r\r|CFF1eff00Utiliser : Attache une Pointe de gangracier à votre bouclier qui inflige de 26 à 38 points de dégàts chaque fois que vous l\'utilisez pour bloquer un coup.|r\r\r Composants :\r\r|TInterface/ICONS/inv_ingot_felsteel:30:30:-20|t|CFF1eff00Barre de gangracier|r x4\r|TInterface/ICONS/inv_elemental_primal_fire:30:30:-20|t|CFF1eff00Feu primordial|r         x4\r|TInterface/ICONS/inv_elemental_primal_earth:30:30:-20|t|CFF1eff00Terre primordial|r      x4',
-			@RECETTE5_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:30:30:-20|t|CFF6E6E6EPointe de bouclier en gangracier',
+			@RECETTE5_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPointe de bouclier en gangracier',
 
-	@RECETTE6 := '|TInterface/ICONS/spell_frost_chainsofice:30:30:-20|t|CFF1eff00Dragonne en adamantite', -- NIVEAU 50
+	@RECETTE6 := '|TInterface/ICONS/spell_frost_chainsofice:35:35:-20|t|CFF1eff00Dragonne en adamantite', -- NIVEAU 50
 		@RECETTE6_0 := '|CFF1eff00DRAGONNE EN ADAMANTITE|r\r|CFFffd100Niveau 50 requis|r\r\r|CFF1eff00Utiliser : Attache une chaîne à votre arme, ce qui réduit de 50% la durée des effets de désarmement et augmente de 15 votre score de parade. Ne se cumule pas avec d\'autres effets similaires\r Si vous fixez une dragonne en adamantite à un objet, celui-ci vous sera lié.|r\r\r Composants :\r\r|TInterface/ICONS/inv_ingot_adamantite:30:30:-20|tBarre d\'adamantite x2\r|TInterface/ICONS/inv_ingot_09:30:30:-20|t|CFF1eff00Barre de khorium|r     x1',
-			@RECETTE6_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:30:30:-20|t|CFF6E6E6EDragonne en adamantite',
+			@RECETTE6_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EDragonne en adamantite',
 
-	@RECETTE7 := '|TInterface/ICONS/inv_misc_armorkit_20:30:30:-20|t|CFF1eff00Pointe de bouclier en thorium', -- NIVEAU 40
+	@RECETTE7 := '|TInterface/ICONS/inv_misc_armorkit_20:35:35:-20|t|CFF1eff00Pointe de bouclier en thorium', -- NIVEAU 40
 		@RECETTE7_0 := '',
-			@RECETTE7_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:30:30:-20|t|CFF6E6E6EPointe de bouclier en thorium',
+			@RECETTE7_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPointe de bouclier en thorium',
 
-	@RECETTE8 := '|TInterface/ICONS/ability_rogue_sprint:30:30:-20|t|CFF1eff00Eperons en mithril', -- NIVEAU 30
+	@RECETTE8 := '|TInterface/ICONS/ability_rogue_sprint:35:35:-20|t|CFF1eff00Eperons en mithril', -- NIVEAU 30
 		@RECETTE8_0 := '',
-			@RECETTE8_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:30:30:-20|t|CFF6E6E6EEperons en mithril',
+			@RECETTE8_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EEperons en mithril',
 
-	@RECETTE9 := '|TInterface/ICONS/inv_misc_armorkit_02:30:30:-20|t|CFF1eff00Pointe de bouclier en mithril', -- NIVEAU 20
+	@RECETTE9 := '|TInterface/ICONS/inv_misc_armorkit_02:35:35:-20|t|CFF1eff00Pointe de bouclier en mithril', -- NIVEAU 20
 		@RECETTE9_0 := '',
-			@RECETTE9_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:30:30:-20|t|CFF6E6E6EPointe de bouclier en mithril',
+			@RECETTE9_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPointe de bouclier en mithril',
 
-	@RECETTE10 := '|TInterface/ICONS/spell_frost_chainsofice:30:30:-20|tDragonne en acier', -- NIVEAU 20
+	@RECETTE10 := '|TInterface/ICONS/spell_frost_chainsofice:35:35:-20|tDragonne en acier', -- NIVEAU 20
 		@RECETTE10_0 := '',
-			@RECETTE10_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:30:30:-20|t|CFF6E6E6EDragonne en acier',
+			@RECETTE10_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EDragonne en acier',
 
-	@RECETTE11 := '|TInterface/ICONS/inv_misc_orb_01:30:30:-20|tContrepoids en fer', -- NIVEAU 15
+	@RECETTE11 := '|TInterface/ICONS/inv_misc_orb_01:35:35:-20|tContrepoids en fer', -- NIVEAU 15
 		@RECETTE11_0 ='',
-			@RECETTE11_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:30:30:-20|t|CFF6E6E6EContrepoids en fer',
+			@RECETTE11_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EContrepoids en fer',
 
-	@RECETTE12 := '|TInterface/ICONS/inv_misc_armorkit_01:30:30:-20|tPointe de bouclier en fer', -- NIVEAU 15
+	@RECETTE12 := '|TInterface/ICONS/inv_misc_armorkit_01:35:35:-20|tPointe de bouclier en fer', -- NIVEAU 15
 		@RECETTE12_0 := '',
-			@RECETTE12_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:30:30:-20|t|CFF6E6E6EPointe de bouclier en fer',
+			@RECETTE12_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPointe de bouclier en fer';
 
 	#
 	#- AMELIORATION D'OBJET FIN
 	#
-	-- -- -- --
-	#
-	#- Autres DEBUT
-	#
-	@RECETTE13 := '',
-		@RECETTE13_0 := '';
-
 REPLACE INTO `gossip_menu_option` (`MenuID`, `OptionID`, `OptionIcon`, `OptionText`, `OptionType`, `OptionNpcFlag`, `ActionMenuID`, `BoxText`)
 VALUES
 	(@GOSSIP_MENU_ENTRY, @GOSSIP_MENU_OPTION, @GOSSIP_MENU_ICON, 'Amélioration d\'objet', @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+50, ''),
@@ -129,7 +123,152 @@ VALUES
 
 		(@GOSSIP_MENU_ENTRY+50, @GOSSIP_MENU_OPTION+51, @GOSSIP_MENU_ICON, 'Page suivante ->', @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+51, ''),
 
+		(@GOSSIP_MENU_ENTRY+51, @GOSSIP_MENU_OPTION+0, @GOSSIP_MENU_ICON, '<- Page précédente', @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+50, ''),
+
+		(@GOSSIP_MENU_ENTRY+51, @GOSSIP_MENU_OPTION+1, @GOSSIP_MENU_ICON, @RECETTE7, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+51, @RECETTE7_0),
+			(@GOSSIP_MENU_ENTRY+51, @GOSSIP_MENU_OPTION+2, @GOSSIP_MENU_ICON, @RECETTE7_1, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+51, @RECETTE_NA),
+
+		(@GOSSIP_MENU_ENTRY+51, @GOSSIP_MENU_OPTION+3, @GOSSIP_MENU_ICON, @RECETTE8, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+51, @RECETTE8_0),
+			(@GOSSIP_MENU_ENTRY+51, @GOSSIP_MENU_OPTION+4, @GOSSIP_MENU_ICON, @RECETTE8_1, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+51, @RECETTE_NA),
+
+		(@GOSSIP_MENU_ENTRY+51, @GOSSIP_MENU_OPTION+5, @GOSSIP_MENU_ICON, @RECETTE9, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+51, @RECETTE9_0),
+			(@GOSSIP_MENU_ENTRY+51, @GOSSIP_MENU_OPTION+6, @GOSSIP_MENU_ICON, @RECETTE9_1, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+51, @RECETTE_NA),
+
+		(@GOSSIP_MENU_ENTRY+51, @GOSSIP_MENU_OPTION+7, @GOSSIP_MENU_ICON, @RECETTE10, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+51, @RECETTE10_0),
+			(@GOSSIP_MENU_ENTRY+51, @GOSSIP_MENU_OPTION+8, @GOSSIP_MENU_ICON, @RECETTE10_1, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+51, @RECETTE_NA),
+
+		(@GOSSIP_MENU_ENTRY+51, @GOSSIP_MENU_OPTION+9, @GOSSIP_MENU_ICON, @RECETTE11, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+51, @RECETTE11_0),
+			(@GOSSIP_MENU_ENTRY+51, @GOSSIP_MENU_OPTION+10, @GOSSIP_MENU_ICON, @RECETTE11_1, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+51, @RECETTE_NA),
+
+		(@GOSSIP_MENU_ENTRY+51, @GOSSIP_MENU_OPTION+11, @GOSSIP_MENU_ICON, @RECETTE12, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+51, @RECETTE12_0),
+				(@GOSSIP_MENU_ENTRY+51, @GOSSIP_MENU_OPTION+12, @GOSSIP_MENU_ICON, @RECETTE12_1, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+51, @RECETTE_NA);
+		-- -- -- --
+	#
+	#- AUTRE DEBUT
+	#
+SET
+	@RECETTE13 := '|CFF1eff00Passe-partout en titane',
+		@RECETTE13_0 := '',
+			@RECETTE13_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPasse-partout en titane',
+
+	@RECETTE14 := 'Gardien de sauvegarde supérieur',
+		@RECETTE14_0 := '',
+			@RECETTE14_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EGardien de sauvegarde supérieur',
+
+	@RECETTE15 := '|CFF1eff00Passe-partout en cobalt',
+		@RECETTE15_0 := '',
+			@RECETTE15_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPasse-partout en cobalt',
+
+	@RECETTE16 := '|CFF1eff00Pierre à aiguiser adamantine',
+		@RECETTE16_0 := '',
+			@RECETTE16_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPierre à aiguiser adamantine',
+
+	@RECETTE17 := '|CFF1eff00Pierre de lest d\'adamantine',
+		@RECETTE17_0 := '',
+			@RECETTE17_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPierre de lest d\'adamantine',
+
+	@RECETTE18 := 'Rune de garde supérieure',
+		@RECETTE18_0 := '',
+			@RECETTE18_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6ERune de garde supérieure',
+
+	@RECETTE19 := 'Gardien de sauvegarde inférieur',
+		@RECETTE19_0 := '',
+			@RECETTE19_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EGardien de sauvegarde inférieur',
+
+	@RECETTE20 := 'Rune de garde inférieure',
+		@RECETTE20_0 := '',
+			@RECETTE20_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6ERune de garde inférieure',
+
+	@RECETTE21 := '|CFF1eff00Pierre à aiguiser élémentaire',
+		@RECETTE21_0 := '',
+			@RECETTE21_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPierre à aiguiser élémentaire',
+
+	@RECETTE22 := 'Pierre à aiguiser gangrenée',
+		@RECETTE22_0 := '',
+			@RECETTE22_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPierre à aiguiser gangrenée',
+
+	@RECETTE23 := 'Pierre de lest gangrenée',
+		@RECETTE23_0 := '',
+			@RECETTE23_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPierre de lest gangrenée',
+
+	@RECETTE24 := '|CFF1eff00Passe-partout en arcanite',
+		@RECETTE24_0 := '',
+			@RECETTE24_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPasse-partout en arcanite',
+
+	@RECETTE25 := 'Pierre à aiguiser dense',
+		@RECETTE25_0 := '',
+			@RECETTE25_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPierre à aiguiser dense',
+
+	@RECETTE26 := 'Pierre de lest dense',
+		@RECETTE26_0 := '',
+			@RECETTE26_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPierre de lest dense',
+
+	@RECETTE27 := '|CFF1eff00Passe-partout en vrai-argent',
+		@RECETTE27_0 := '',
+			@RECETTE27_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPasse-partout en vrai-argent',
+
+	@RECETTE28 := 'Pierre à aiguiser solide',
+		@RECETTE28_0 := '',
+			@RECETTE28_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPierre à aiguiser solide',
+
+	@RECETTE29 := 'Pierre de lest solide',
+		@RECETTE29_0 := '',
+			@RECETTE29_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPierre de lest solide',
+
+	@RECETTE30 := '|CFF1eff00Passe-partout en or',
+		@RECETTE30_0 := '',
+			@RECETTE30_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPasse-partout en or',
+
+	@RECETTE31 := 'Pierre à aiguiser lourde',
+		@RECETTE31_0 := '',
+			@RECETTE31_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPierre à aiguiser lourde',
+
+	@RECETTE32 := 'Pierre de lest lourde',
+		@RECETTE32_0 := '',
+			@RECETTE32_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPierre de lest lourde',
+
+	@RECETTE33 := '|CFF1eff00Passe-partout en argent',
+		@RECETTE33_0 := '',
+			@RECETTE33_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPasse-partout en argent',
+
+	@RECETTE34 := 'Pierre à aiguiser grossière',
+		@RECETTE34_0 := '',
+			@RECETTE34_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPierre à aiguiser grossière',
+
+	@RECETTE35 := 'Pierre de lest grossière',
+		@RECETTE35_0 := '',
+			@RECETTE35_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPierre de lest grossière',
+
+	@RECETTE36 := 'Pierre à aiguiser brute',
+		@RECETTE36_0 := '',
+			@RECETTE36_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPierre à aiguiser brute',
+
+	@RECETTE37 := 'Pierre de lest brute',
+		@RECETTE37_0 := '',
+			@RECETTE37_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPierre de lest brute';
+
+REPLACE INTO `gossip_menu_option` (`MenuID`, `OptionID`, `OptionIcon`, `OptionText`, `OptionType`, `OptionNpcFlag`, `ActionMenuID`, `BoxText`)
+VALUES
 	(@GOSSIP_MENU_ENTRY, @GOSSIP_MENU_OPTION+1, @GOSSIP_MENU_ICON, 'Autres', @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+100, ''),
+		(@GOSSIP_MENU_ENTRY+100, @GOSSIP_MENU_OPTION+0, @GOSSIP_MENU_ICON, '<- Retour au menu', @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID, ''),
+		
+		(@GOSSIP_MENU_ENTRY+100, @GOSSIP_MENU_OPTION+1, @GOSSIP_MENU_ICON, @RECETTE13, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+100, @RECETTE13_0),
+				(@GOSSIP_MENU_ENTRY+100, @GOSSIP_MENU_OPTION+2, @GOSSIP_MENU_ICON, @RECETTE13_1, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+100, @RECETTE_NA),
+
+		(@GOSSIP_MENU_ENTRY+100, @GOSSIP_MENU_OPTION+3, @GOSSIP_MENU_ICON, @RECETTE14, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+100, @RECETTE14_0),
+				(@GOSSIP_MENU_ENTRY+100, @GOSSIP_MENU_OPTION+4, @GOSSIP_MENU_ICON, @RECETTE14_1, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+100, @RECETTE_NA),
+
+		(@GOSSIP_MENU_ENTRY+100, @GOSSIP_MENU_OPTION+5, @GOSSIP_MENU_ICON, @RECETTE15, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+100, @RECETTE15_0),
+				(@GOSSIP_MENU_ENTRY+100, @GOSSIP_MENU_OPTION+6, @GOSSIP_MENU_ICON, @RECETTE15_1, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+100, @RECETTE_NA),
+
+		(@GOSSIP_MENU_ENTRY+100, @GOSSIP_MENU_OPTION+7, @GOSSIP_MENU_ICON, @RECETTE16, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+100, @RECETTE16_0),
+				(@GOSSIP_MENU_ENTRY+100, @GOSSIP_MENU_OPTION+8, @GOSSIP_MENU_ICON, @RECETTE16_1, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+100, @RECETTE_NA),
+
+		(@GOSSIP_MENU_ENTRY+100, @GOSSIP_MENU_OPTION+9, @GOSSIP_MENU_ICON, @RECETTE17, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+100, @RECETTE17_0),
+				(@GOSSIP_MENU_ENTRY+100, @GOSSIP_MENU_OPTION+10, @GOSSIP_MENU_ICON, @RECETTE17_1, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+100, @RECETTE_NA),
+
+		(@GOSSIP_MENU_ENTRY+100, @GOSSIP_MENU_OPTION+11, @GOSSIP_MENU_ICON, @RECETTE18, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+100, @RECETTE18_0),
+				(@GOSSIP_MENU_ENTRY+100, @GOSSIP_MENU_OPTION+12, @GOSSIP_MENU_ICON, @RECETTE18_1, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+100, @RECETTE_NA),
 
 	(@GOSSIP_MENU_ENTRY, @GOSSIP_MENU_OPTION+2, @GOSSIP_MENU_ICON, 'Armes', @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+150, ''),
 
