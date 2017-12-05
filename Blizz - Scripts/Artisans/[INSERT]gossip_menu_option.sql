@@ -42,11 +42,10 @@ SET -- La nous allons répertoriés les recettes non apprises. Autres paramétre
 	@RECETTE_NA := 'Malheureusement l\'artisan n\'as pas encore appris a créer ceci!\r',
 	@GOSSIP_MENU_ICON := 1;
 
+#
+#- AMELIORATION D'OBJET DEBUT
+#
 SET -- La nous allons répertoriés toutes les recettes.
-	#
-	#- AMELIORATION D'OBJET DEBUT
-	#
-	
 	@RECETTE1 := '|TInterface/ICONS/inv_shield_19:35:35:-20|t|CFF0070ddPlaque en titane', -- NIVEAU 70
 		@RECETTE1_0 := '|CFF0070ddPLAQUE EN TITANE|r\r|CFFffd100Niveau 70 requis|r\r\r|CFF1eff00Utiliser : Fixe de façon permanente une plaque légère en titane à un bouclier, ce qui en augmente la valeur de blocagede 81 et réduit la durée des effets de désarmement de 50%. Ne se cumule pas avec les effets similaires.\r Si vous fixez cette plaque en titane sur un bouclier, celui-ci vous seras lié.|r\r\r Composants :\r\r|TInterface/ICONS/inv_ingot_platinum:30:30:-20|t|CFF1eff00Barre de titane  |r x4\r|TInterface/ICONS/inv_elemental_eternal_shadow:30:30:-20|t|CFF1eff00Ombre éternelle|r x4',
 			@RECETTE1_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPlaque en titane',
@@ -95,9 +94,6 @@ SET -- La nous allons répertoriés toutes les recettes.
 		@RECETTE12_0 := '',
 			@RECETTE12_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPointe de bouclier en fer';
 
-	#
-	#- AMELIORATION D'OBJET FIN
-	#
 REPLACE INTO `gossip_menu_option` (`MenuID`, `OptionID`, `OptionIcon`, `OptionText`, `OptionType`, `OptionNpcFlag`, `ActionMenuID`, `BoxText`)
 VALUES
 	(@GOSSIP_MENU_ENTRY, @GOSSIP_MENU_OPTION, @GOSSIP_MENU_ICON, 'Amélioration d\'objet', @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+50, ''),
@@ -142,108 +138,111 @@ VALUES
 
 		(@GOSSIP_MENU_ENTRY+51, @GOSSIP_MENU_OPTION+11, @GOSSIP_MENU_ICON, @RECETTE12, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+51, @RECETTE12_0),
 				(@GOSSIP_MENU_ENTRY+51, @GOSSIP_MENU_OPTION+12, @GOSSIP_MENU_ICON, @RECETTE12_1, @GOSSIP_MENU_TYPE, @GOSSIP_MENU_FLAGS, @GOSSIP_MENU_ENTRYID+51, @RECETTE_NA);
-		-- -- -- --
-	#
-	#- AUTRE DEBUT
-	#
+#
+#- AMELIORATION D'OBJET FIN
+#
+-- -- -- --
+#
+#- AUTRE DEBUT
+#
 SET
-	@RECETTE13 := '|CFF1eff00Passe-partout en titane',
+	@RECETTE13 := '|TInterface/ICONS/inv_misc_key_11:35:35:-20|t|CFF1eff00Passe-partout en titane',
 		@RECETTE13_0 := '',
 			@RECETTE13_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPasse-partout en titane',
 
-	@RECETTE14 := 'Gardien de sauvegarde supérieur',
+	@RECETTE14 := '|TInterface/ICONS/inv_misc_rune_13:35:35:-20|tGardien de sauvegarde supérieur',
 		@RECETTE14_0 := '',
 			@RECETTE14_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EGardien de sauvegarde supérieur',
 
-	@RECETTE15 := '|CFF1eff00Passe-partout en cobalt',
+	@RECETTE15 := '|TInterface/ICONS/inv_misc_key_07:35:35:-20|t|CFF1eff00Passe-partout en cobalt',
 		@RECETTE15_0 := '',
 			@RECETTE15_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPasse-partout en cobalt',
 
-	@RECETTE16 := '|CFF1eff00Pierre à aiguiser adamantine',
+	@RECETTE16 := '|TInterface/ICONS/inv_stone_sharpeningstone_07:35:35:-20|t|CFF1eff00Pierre à aiguiser adamantine',
 		@RECETTE16_0 := '',
 			@RECETTE16_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPierre à aiguiser adamantine',
 
-	@RECETTE17 := '|CFF1eff00Pierre de lest d\'adamantine',
+	@RECETTE17 := '|TInterface/ICONS/inv_stone_weightstone_07:35:35:-20|t|CFF1eff00Pierre de lest d\'adamantine',
 		@RECETTE17_0 := '',
 			@RECETTE17_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPierre de lest d\'adamantine',
 
-	@RECETTE18 := 'Rune de garde supérieure',
+	@RECETTE18 := '|TInterface/ICONS/inv_misc_rune_10:35:35:-20|tRune de garde supérieure',
 		@RECETTE18_0 := '',
 			@RECETTE18_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6ERune de garde supérieure',
 
-	@RECETTE19 := 'Gardien de sauvegarde inférieur',
+	@RECETTE19 := '|TInterface/ICONS/inv_misc_rune_12:35:35:-20|tGardien de sauvegarde inférieur',
 		@RECETTE19_0 := '',
 			@RECETTE19_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EGardien de sauvegarde inférieur',
 
-	@RECETTE20 := 'Rune de garde inférieure',
+	@RECETTE20 := '|TInterface/ICONS/inv_misc_rune_11:35:35:-20|tRune de garde inférieure',
 		@RECETTE20_0 := '',
 			@RECETTE20_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6ERune de garde inférieure',
 
-	@RECETTE21 := '|CFF1eff00Pierre à aiguiser élémentaire',
+	@RECETTE21 := '|TInterface/ICONS/inv_stone_02:35:35:-20|t|CFF1eff00Pierre à aiguiser élémentaire',
 		@RECETTE21_0 := '',
 			@RECETTE21_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPierre à aiguiser élémentaire',
 
-	@RECETTE22 := 'Pierre à aiguiser gangrenée',
+	@RECETTE22 := '|TInterface/ICONS/inv_stone_sharpeningstone_06:35:35:-20|tPierre à aiguiser gangrenée',
 		@RECETTE22_0 := '',
 			@RECETTE22_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPierre à aiguiser gangrenée',
 
-	@RECETTE23 := 'Pierre de lest gangrenée',
+	@RECETTE23 := '|TInterface/ICONS/inv_stone_weightstone_06:35:35:-20|tPierre de lest gangrenée',
 		@RECETTE23_0 := '',
 			@RECETTE23_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPierre de lest gangrenée',
 
-	@RECETTE24 := '|CFF1eff00Passe-partout en arcanite',
+	@RECETTE24 := '|TInterface/ICONS/inv_misc_key_08:35:35:-20|t|CFF1eff00Passe-partout en arcanite',
 		@RECETTE24_0 := '',
 			@RECETTE24_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPasse-partout en arcanite',
 
-	@RECETTE25 := 'Pierre à aiguiser dense',
+	@RECETTE25 := '|TInterface/ICONS/inv_stone_sharpeningstone_05:35:35:-20|tPierre à aiguiser dense',
 		@RECETTE25_0 := '',
 			@RECETTE25_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPierre à aiguiser dense',
 
-	@RECETTE26 := 'Pierre de lest dense',
+	@RECETTE26 := '|TInterface/ICONS/inv_stone_weightstone_05:35:35:-20|tPierre de lest dense',
 		@RECETTE26_0 := '',
 			@RECETTE26_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPierre de lest dense',
 
-	@RECETTE27 := '|CFF1eff00Passe-partout en vrai-argent',
+	@RECETTE27 := '|TInterface/ICONS/inv_misc_key_11:35:35:-20|t|CFF1eff00Passe-partout en vrai-argent',
 		@RECETTE27_0 := '',
 			@RECETTE27_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPasse-partout en vrai-argent',
 
-	@RECETTE28 := 'Pierre à aiguiser solide',
+	@RECETTE28 := '|TInterface/ICONS/inv_stone_sharpeningstone_04:35:35:-20|tPierre à aiguiser solide',
 		@RECETTE28_0 := '',
 			@RECETTE28_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPierre à aiguiser solide',
 
-	@RECETTE29 := 'Pierre de lest solide',
+	@RECETTE29 := '|TInterface/ICONS/inv_stone_weightstone_04:35:35:-20|tPierre de lest solide',
 		@RECETTE29_0 := '',
 			@RECETTE29_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPierre de lest solide',
 
-	@RECETTE30 := '|CFF1eff00Passe-partout en or',
+	@RECETTE30 := '|TInterface/ICONS/inv_misc_key_13:35:35:-20|t|CFF1eff00Passe-partout en or',
 		@RECETTE30_0 := '',
 			@RECETTE30_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPasse-partout en or',
 
-	@RECETTE31 := 'Pierre à aiguiser lourde',
+	@RECETTE31 := '|TInterface/ICONS/inv_stone_sharpeningstone_03:35:35:-20|tPierre à aiguiser lourde',
 		@RECETTE31_0 := '',
 			@RECETTE31_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPierre à aiguiser lourde',
 
-	@RECETTE32 := 'Pierre de lest lourde',
+	@RECETTE32 := '|TInterface/ICONS/inv_stone_weightstone_03:35:35:-20|tPierre de lest lourde',
 		@RECETTE32_0 := '',
 			@RECETTE32_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPierre de lest lourde',
 
-	@RECETTE33 := '|CFF1eff00Passe-partout en argent',
+	@RECETTE33 := '|TInterface/ICONS/inv_misc_key_03:35:35:-20|t|CFF1eff00Passe-partout en argent',
 		@RECETTE33_0 := '',
 			@RECETTE33_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPasse-partout en argent',
 
-	@RECETTE34 := 'Pierre à aiguiser grossière',
+	@RECETTE34 := '|TInterface/ICONS/inv_stone_sharpeningstone_02:35:35:-20|tPierre à aiguiser grossière',
 		@RECETTE34_0 := '',
 			@RECETTE34_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPierre à aiguiser grossière',
 
-	@RECETTE35 := 'Pierre de lest grossière',
+	@RECETTE35 := '|TInterface/ICONS/inv_stone_weightstone_02:35:35:-20|tPierre de lest grossière',
 		@RECETTE35_0 := '',
 			@RECETTE35_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPierre de lest grossière',
 
-	@RECETTE36 := 'Pierre à aiguiser brute',
+	@RECETTE36 := '|TInterface/ICONS/inv_stone_sharpeningstone_01:35:35:-20|tPierre à aiguiser brute',
 		@RECETTE36_0 := '',
 			@RECETTE36_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPierre à aiguiser brute',
 
-	@RECETTE37 := 'Pierre de lest brute',
+	@RECETTE37 := '|TInterface/ICONS/inv_stone_weightstone_01:35:35:-20|tPierre de lest brute',
 		@RECETTE37_0 := '',
 			@RECETTE37_1 := '|TInterface/PaperDoll/Ui-paperdoll-slot-bag:35:35:-20|t|CFF6E6E6EPierre de lest brute';
 
